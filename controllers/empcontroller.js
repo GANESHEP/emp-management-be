@@ -8,6 +8,7 @@ exports.createEmp = async (req,res) => {
     console.log(req.body)
     console.log("testing" ,req.method)
     console.log("new console is added")
+    console.log("new console added for generate conflict");
      const newEmployee = new Employee(req.body);
      const saveEmp = await newEmployee.save();
      res.status(201).send(saveEmp)
