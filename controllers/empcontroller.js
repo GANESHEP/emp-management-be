@@ -6,7 +6,8 @@ const Employee = require('../models/employee.model')
 
 exports.createEmp = async (req,res) => {
     console.log(req.body)
-    console.log("testing" ,req.method)
+    console.log("testing" ,req.method);
+    console.log("new console added for generate conflict");
      const newEmployee = new Employee(req.body);
      const saveEmp = await newEmployee.save();
      res.status(201).send(saveEmp)
